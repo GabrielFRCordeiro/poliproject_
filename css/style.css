@@ -1,0 +1,71 @@
+:root{
+    --color-primary: #BF0628;
+    --color-secundary: #030640;
+    --color-text: #010326;
+    --color-white: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color-text);
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.btn_test{
+    background-color: var(--color-secundary);
+    border: none;
+}
+
+.contact{
+    background-color: var(--color-primary);
+}
+
+.contact_form{
+    display: grid;
+    grid-template: 
+    '. nome nome . mensagem mensagem mensagem .' 1fr
+    '. sobrenome sobrenome . mensagem mensagem mensagem .' 1fr
+    '. email email . mensagem mensagem mensagem .' 1fr
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+#t_field_nome{
+    grid-area: nome;
+}
+
+#t_field_sobrenome{
+    grid-area: sobrenome;
+}
+
+#t_field_email{
+    grid-area: email;
+}
+
+#t_field_mensagem{
+    grid-area: mensagem;
+}
+
+.btn_send_container{
+    display: grid;
+    grid-template: '. . . . . btn_send btn_send .' 1fr
+    / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.btn_send{
+    grid-area: btn_send;
+    border-radius: 0 15em 15em 0;
+}
