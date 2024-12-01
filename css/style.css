@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     color: var(--color-text);
+    font-family: 'Quicksand', 'sans-serif';
 }
 
 body{
@@ -92,4 +93,12 @@ a{
 
 .btn_fechar_modal i{
     color: var(--color-white);
+}
+
+.card_titulo{
+    color: var(--color-text);
+}
+
+.card_texto{
+    color: var(--color-text);
 }
