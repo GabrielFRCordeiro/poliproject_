@@ -74,6 +74,10 @@ let en_score = 0;
 let pt_score = 0;
 
 function loadQuestion(questions, test_id, question, option, current_question, score) {
+   if (localStorage.getItem(test_id, score)) {
+        localStorage.removeItem(test_id);
+   }
+
     if (current_question < questions.length) {
         const questionData = questions[current_question];
         document.getElementById(question).textContent = questionData.question;
@@ -88,22 +92,39 @@ function loadQuestion(questions, test_id, question, option, current_question, sc
             <p>Sua pontuação final é: ${score}</p>
             
         `;
+        localStorage.setItem(test_id, score);
     }
 }
 
-function checkAnswer(questions, test_id, question, option, current_question, score, selected) {
-    if (selected === questions[current_question].correct) {
-    score += 10;
-    document.getElementById("score").textContent = `Pontuação: ${score}`;
+function checkAnswer(language, selected) {
+    switch (language) {
+        case 'en':
+            if (selected === en_questions[current_en_question].correct) {
+                en_score += 10;
+                document.getElementById('en_score').textContent = `Pontuação: ${en_score}`;
+            }
+            current_en_question++;
+            loadQuestion(en_questions, "game-container", "en_question", ".en_option", current_en_question, en_score);
+            break;
+
+        case 'pt':
+            if (selected === pt_questions[current_pt_question].correct) {
+                pt_score += 10;
+                document.getElementById('pt_score').textContent = `Pontuação: ${pt_score}`;
+            }
+            current_pt_question++;
+            loadQuestion(pt_questions, "teste_portugues", "pt_question", ".pt_option", current_pt_question, pt_score);
+            break;
+    
+        default:
+            break;
     }
-    current_question++;
-    loadQuestion(questions, test_id, question, option, current_question, score);
 }
 
 function restartGame(questions, test_id, question, option, current_question, score) {
     current_question = 0;
     score = 0;
-    document.getElementById("score").textContent = `Pontuação: 0`;
+    document.getElementById(language_score).textContent = `Pontuação: 0`;
     loadQuestion(questions, test_id, question, option, current_question, score);
 }
 
