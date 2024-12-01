@@ -102,3 +102,8 @@ a{
 .card_texto{
     color: var(--color-text);
 }
+
+.contact_links{
+    color: var(--color-white);
+    font-weight: 500;
+}
