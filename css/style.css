@@ -69,3 +69,27 @@ a{
     grid-area: btn_send;
     border-radius: 0 15em 15em 0;
 }
+
+.modal_teste{
+    width: 100%;
+    height: 100%;
+}
+
+.modal_content, .modal_content p{
+    background-color: var(--color-secundary);
+    color: var(--color-white);
+}
+
+.modal_content{
+    position: relative;
+}
+
+.btn_fechar_modal{
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+}
+
+.btn_fechar_modal i{
+    color: var(--color-white);
+}
