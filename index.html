@@ -27,19 +27,19 @@
                 <div id="modal_teste_ingles" class="modal_teste modal py-5 text-center flex-column justify-content-center">
                     <div id="game-container" class="modal_content border p-4 rounded">
                         <button id="close_modal_ingles" class="btn btn_fechar_modal"><i class="bi bi-x-lg"></i></button>
-                        <h3 id="question" class="mb-4">Bem-vindo ao jogo! Clique para começar.</h3>
+                        <h3 id="en_question" class="mb-4">Bem-vindo ao jogo! Clique para começar.</h3>
                         <div id="options" class="row">
                         <div class="col-md-6 mb-3">
-                            <button class="btn btn-primary btn-block w-100 option" onclick="checkAnswer(0)">Opção A</button>
+                            <button class="btn btn-primary btn-block w-100 en_option" onclick="checkAnswer(en_questions, 'game-container', 'en_question', 'en_option', current_en_question, en_score, 0)">Opção A</button>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <button class="btn btn-primary btn-block w-100 option" onclick="checkAnswer(1)">Opção B</button>
+                            <button class="btn btn-primary btn-block w-100 en_option" onclick="checkAnswer(en_questions, 'game-container', 'en_question', 'en_option', current_en_question, en_score, 1)">Opção B</button>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <button class="btn btn-primary btn-block w-100 option" onclick="checkAnswer(2)">Opção C</button>
+                            <button class="btn btn-primary btn-block w-100 en_option" onclick="checkAnswer(en_questions, 'game-container', 'en_question', 'en_option', current_en_question, en_score, 2)">Opção C</button>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <button class="btn btn-primary btn-block w-100 option" onclick="checkAnswer(3)">Opção D</button>
+                            <button class="btn btn-primary btn-block w-100 en_option" onclick="checkAnswer(en_questions, 'game-container', 'en_question', 'en_option', current_en_question, en_score, 3)">Opção D</button>
                         </div>
                         </div>
                         <p id="score" class="mt-4 fs-2 fw-bold">Pontuação: 0</p>
@@ -47,39 +47,25 @@
                 </div>
             
                 <!-- Modal Teste Portugues -->
-                <div id="modal_teste_portugues" class="modal">
-                    <form class="modal-content" id="form_publicar">
-                        <fieldset class="w-100 d-flex justify-content-center img_postar">
-                            <label for="publicacao_img" class="img_preview_publicar_container">
-                                <div id="img_preview_publicar" class="img_placeholder_publicar overflow-hidden"></div>
-                            </label>
-                            <input type="file" name="publicacao_img" id="publicacao_img" accept="image/*" class="img_cadastrar" required>
-                        </fieldset>
-
-                        <fieldset class="field_categoria px-3">
-                            <label for="input_categoria" class="text-capitalize">categoria</label>
-                            <!-- Required -->
-                            <span class="input_categoria_wrapper">
-                                <select name="categoria" id="input_categoria" class="input_categoria">
-                                    <option value="">selecione</option>
-                                    <option value="doce">doce</option>
-                                    <option value="salgado">salgado</option>
-                                </select>
-                            </span>
-                        </fieldset>
-
-                        <fieldset class="field_verde">
-                            <label for="t_field_legenda" class="text-capitalize">legenda</label>
-                            <textarea name="legenda" id="t_field_legenda" maxlength="50"></textarea>
-                        </fieldset>
-
-                        <fieldset class="field_verde">
-                            <label for="t_field_receita" class="text-capitalize">receita</label>
-                            <textarea name="receita" id="t_field_receita" maxlength="500"></textarea>
-                        </fieldset>
-                    </form>
-                    <div class="w-100 d-flex justify-content-center mt-5">
-                        <button type="submit" class="btn_acao text-capitalize" id="btn_publicar" form="form_publicar">publicar</button>
+                <div id="modal_teste_portugues" class="modal_teste modal py-5 text-center flex-column justify-content-center">
+                    <div id="teste_portugues" class="modal_content border p-4 rounded">
+                        <button id="close_modal_portugues" class="btn btn_fechar_modal"><i class="bi bi-x-lg"></i></button>
+                        <h3 id="pt_question" class="mb-4">Bem-vindo ao jogo! Clique para começar.</h3>
+                        <div id="pt_options" class="row">
+                        <div class="col-md-6 mb-3">
+                            <button class="btn btn-primary btn-block w-100 pt_option" onclick="checkAnswer(pt_questions, 'teste_portugues', 'pt_question', 'pt_option', current_pt_question, pt_score, 0)">Opção A</button>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <button class="btn btn-primary btn-block w-100 pt_option" onclick="checkAnswer(pt_questions, 'teste_portugues', 'pt_question', 'pt_option', current_pt_question, pt_score, 1)">Opção B</button>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <button class="btn btn-primary btn-block w-100 pt_option" onclick="checkAnswer(pt_questions, 'teste_portugues', 'pt_question', 'pt_option', current_pt_question, pt_score, 2)">Opção C</button>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <button class="btn btn-primary btn-block w-100 pt_option" onclick="checkAnswer(pt_questions, 'teste_portugues', 'pt_question', 'pt_option', current_pt_question, pt_score, 3)">Opção D</button>
+                        </div>
+                        </div>
+                        <p id="score" class="mt-4 fs-2 fw-bold">Pontuação: 0</p>
                     </div>
                 </div>
             </section>
@@ -113,5 +99,6 @@
         </footer>
 
         <script src="./js/modal.js"></script>
+        <script src="./js/teste_idioma.js"></script>
 </body>
 </html>
