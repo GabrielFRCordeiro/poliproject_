@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-        <main class="container">
-            <section class="mt-5 row">
-                <h1 class="mb-4">Welcome to the Poli Project</h1>
-
-                
-
-                
-
+    <header>
+        <div class="banner d-flex align-items-center justify-content-center position-relative">
+            <h1 class="mb-4 px-4 banner_titulo">Welcome to the <br>Poli Project</h1>
+            <a href="#conteudo"><i class="bi bi-caret-down-fill display-3 display-lg-2 position-absolute bottom-0 start-50 translate-middle-x"></i></a>
+        </div>
+    </header>
+        <main class="container" id="conteudo">
+            <section class="mt-2 row">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="card mb-3 h-100">
@@ -42,10 +42,10 @@
                 </div>
                 <div class="col">
                     <div class="card mb-3 h-100">
-                        <h5 class="card-header card_titulo">Público-Alvo</h5>
+                        <h5 class="card-header card_titulo">Aula Teste Gratuita</h5>
                             <img src="./assets/img_publico_alvo.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="...">
                             <div class="card-body">
-                              <p class="card-text">Minhas aulas são voltadas para todos os níveis, desde iniciantes até avançados. Se você é um estudante que precisa de apoio extra, um profissional em busca de fluência ou alguém que deseja se preparar para exames internacionais, estou aqui para ajudar!</p>
+                              <p class="card-text">Para que você possa conhecer meu estilo de ensino e ver como podemos trabalhar juntos, ofereço uma aula teste gratuita! Essa é uma excelente oportunidade para você experimentar o método de ensino, discutir suas metas e expectativas, além de receber um feedback personalizado sobre seu nível atual!</p>
                             </div>
                     </div>
                 </div>
@@ -109,10 +109,6 @@
                 <p>Acredito que cada aluno é único e aprende de maneiras diferentes. Por isso, desenvolvo aulas personalizadas que atendem às necessidades específicas de cada estudante. Minha metodologia é centrada na prática e na comunicação, permitindo que meus alunos se sintam à vontade para usar o inglês em situações do dia a dia.</p>
                 <p>O que mais me motiva como professora é ver meus alunos conquistando seus objetivos e ganhando confiança ao se comunicar em inglês. Cada progresso, por menor que seja, é uma vitória que celebramos juntos. Estou sempre atualizada com as tendências do ensino de idiomas e busco constantemente novas maneiras de tornar as aulas ainda mais interessantes e relevantes.</p>
                 <p>Estou animada para conhecer você e ajudar na sua jornada de aprendizado do inglês! Se você está pronto para dar o próximo passo, entre em contato e vamos agendar uma aula. Junte-se a mim nessa aventura linguística!</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, perferendis expedita? Pariatur harum, culpa, voluptatum asperiores porro enim laborum ullam atque, officiis aperiam mollitia dolorum ad maiores velit voluptas. Eligendi.
-                Reiciendis dolor nesciunt enim nostrum ad debitis accusantium assumenda dolorum rem beatae aperiam laboriosam quos nisi dicta, nemo earum, error, quam dolores quo tempora eveniet inventore rerum quasi! Et, quod!
-                Ducimus ea reiciendis ex, ratione facere eum minus odio, nesciunt ab quos, iure repellat incidunt nemo corporis aut fugiat in suscipit accusamus dolorem officiis. Non expedita officia iusto modi ex.</p>
             </section>
         </main>
         
@@ -123,13 +119,13 @@
             </section>
             <form class="contact_form my-3">
                 <label for="t_field_nome"></label>
-                <input type="text" name="nome" id="t_field_nome" class="p-1" placeholder="Nome">
+                <input type="text" name="nome" id="t_field_nome" class="p-1" placeholder="Nome" required>
                 <label for="t_field_sobrenome"></label>
                 <input type="text" name="sobrenome" id="t_field_sobrenome" class="p-1" placeholder="Sobrenome">
                 <label for="t_field_email"></label>
-                <input type="email" name="email" id="t_field_email" class="p-1" placeholder="E-Mail">
+                <input type="email" name="email" id="t_field_email" class="p-1" placeholder="E-Mail" required>
                 <label for="t_field_mensagem"></label>
-                <textarea name="mensagem" id="t_field_mensagem" class="p-1" placeholder="Envie uma mensagem para mim"></textarea>
+                <textarea name="mensagem" id="t_field_mensagem" class="p-1" placeholder="Envie uma mensagem para mim" required></textarea>
             </form>
             <div class="btn_send_container">
                 <button form="contact" type="submit" class="btn btn-primary btn_test btn_send">Enviar mensagem ></button>
