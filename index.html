@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="d-flex flex-column justify-content-between">
     <header>
         <div class="banner d-flex align-items-center justify-content-center position-relative">
             <h1 class="mb-4 px-4 banner_titulo">Welcome to the <br>Poli Project</h1>
@@ -118,15 +118,15 @@
                 <a href="#" class="fs-5 contact_links">@poliproject_</a>
             </section>
             <form class="contact_form my-3">
-                <label for="t_field_nome"></label>
-                <input type="text" name="nome" id="t_field_nome" class="p-1" placeholder="Nome" required>
-                <label for="t_field_sobrenome"></label>
-                <input type="text" name="sobrenome" id="t_field_sobrenome" class="p-1" placeholder="Sobrenome">
-                <label for="t_field_email"></label>
-                <input type="email" name="email" id="t_field_email" class="p-1" placeholder="E-Mail" required>
-                <label for="t_field_mensagem"></label>
-                <textarea name="mensagem" id="t_field_mensagem" class="p-1" placeholder="Envie uma mensagem para mim" required></textarea>
-            </form>
+                    <label for="t_field_nome"></label>
+                    <input type="text" name="nome" id="t_field_nome" class="p-1" placeholder="Nome" required>
+                    <label for="t_field_sobrenome"></label>
+                    <input type="text" name="sobrenome" id="t_field_sobrenome" class="p-1" placeholder="Sobrenome">
+                    <label for="t_field_email"></label>
+                    <input type="email" name="email" id="t_field_email" class="p-1" placeholder="E-Mail" required>
+                    <label for="t_field_mensagem"></label>
+                    <textarea name="mensagem" id="t_field_mensagem" class="p-1" placeholder="Envie uma mensagem para mim" required></textarea>
+                </form>
             <div class="btn_send_container">
                 <button form="contact" type="submit" class="btn btn-primary btn_test btn_send">Enviar mensagem ></button>
             </div>

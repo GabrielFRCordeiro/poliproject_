@@ -15,9 +15,6 @@
 
 body{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .banner{
@@ -80,11 +77,6 @@ a{
     border-radius: 0 15em 15em 0;
 }
 
-.modal_teste{
-    width: 100%;
-    height: 100%;
-}
-
 .modal_content, .modal_content p{
     background-color: var(--color-secundary);
     color: var(--color-white);
@@ -104,11 +96,7 @@ a{
     color: var(--color-white);
 }
 
-.card_titulo{
-    color: var(--color-text);
-}
-
-.card_texto{
+.card_titulo, .card_texto{
     color: var(--color-text);
 }
 
