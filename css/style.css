@@ -20,6 +20,10 @@ body{
 .banner{
     height: 100vh;
     background-color: var(--color-primary);
+    background-image: url('../assets/img_banner.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .banner_titulo{
@@ -103,4 +107,10 @@ a{
 .contact_links{
     color: var(--color-white);
     font-weight: 500;
+}
+
+@media (min-width: 992px) {
+    .banner{
+        background-attachment: fixed;
+    }
 }
